@@ -59,7 +59,7 @@ sequelize
 //     raw: true,
 //     where: {
 //       year: {
-//         [Sequelize.Op.gt]: 2020,
+//         [Sequelize.Op.lt]: 2020,
 //       },
 //     },
 //   });
