@@ -41,6 +41,7 @@ module.exports = (sequelize, DataTypes) => {
 
       ram: {
         type: DataTypes.INTEGER(5),
+        allowNull: false,
         validate: {
           isNumeric: true,
         },
@@ -59,14 +60,16 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
 
-      hasNFC: {
+      hasNfc: {
         type: DataTypes.BOOLEAN,
+        allowNull: false,
       },
     },
 
     {
       sequelize,
       modelName: 'Phone',
+      underscored: true,
     }
   );
   return Phone;
